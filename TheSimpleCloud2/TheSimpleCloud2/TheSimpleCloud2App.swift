@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GoogleSignIn
 
 @main
 struct TheSimpleCloud2App: App {
@@ -13,8 +14,25 @@ struct TheSimpleCloud2App: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .onOpenURL { url in
+                          GIDSignIn.sharedInstance.handle(url)
+                        }
+                .onAppear {
+                          GIDSignIn.sharedInstance.restorePreviousSignIn { user, error in
+                            // Check if `user` exists; otherwise, do something with `error`
+                              setupGoogle()
+                          }
+                        }
         }
+    }
+    
+    func setupGoogle() {
+        
+        let clientID = "1024248679237-54lmurqjut46li6m0rikh809tbrd8p34.apps.googleusercontent.com"
+        let config = GIDConfiguration(clientID: clientID)
+                
+        GIDSignIn.sharedInstance.configuration = config
     }
 }

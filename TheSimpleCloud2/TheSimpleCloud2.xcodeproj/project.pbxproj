@@ -13,6 +13,11 @@
 		9AB8E9102CF4319600CD3DEC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AB8E90F2CF4319600CD3DEC /* Preview Assets.xcassets */; };
 		9AB8E9122CF4319600CD3DEC /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8E9112CF4319600CD3DEC /* Persistence.swift */; };
 		9AB8E9152CF4319600CD3DEC /* TheSimpleCloud2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8E9132CF4319600CD3DEC /* TheSimpleCloud2.xcdatamodeld */; };
+		9AB8E91E2CF4395500CD3DEC /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8E91D2CF4395500CD3DEC /* LoginView.swift */; };
+		9AB8E9202CF5993D00CD3DEC /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AB8E91F2CF5993D00CD3DEC /* LoginViewModel.swift */; };
+		9AB8E9232CF97B0400CD3DEC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 9AB8E9222CF97B0400CD3DEC /* GoogleSignIn */; };
+		9AB8E9252CF97B0400CD3DEC /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 9AB8E9242CF97B0400CD3DEC /* GoogleSignInSwift */; };
+		9AB8E9282CF9941E00CD3DEC /* client_1024248679237-54lmurqjut46li6m0rikh809tbrd8p34.apps.googleusercontent.com.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AB8E9272CF9941E00CD3DEC /* client_1024248679237-54lmurqjut46li6m0rikh809tbrd8p34.apps.googleusercontent.com.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,10 @@
 		9AB8E90F2CF4319600CD3DEC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9AB8E9112CF4319600CD3DEC /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		9AB8E9142CF4319600CD3DEC /* TheSimpleCloud2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TheSimpleCloud2.xcdatamodel; sourceTree = "<group>"; };
+		9AB8E91D2CF4395500CD3DEC /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		9AB8E91F2CF5993D00CD3DEC /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		9AB8E9262CF97E5200CD3DEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9AB8E9272CF9941E00CD3DEC /* client_1024248679237-54lmurqjut46li6m0rikh809tbrd8p34.apps.googleusercontent.com.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "client_1024248679237-54lmurqjut46li6m0rikh809tbrd8p34.apps.googleusercontent.com.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB8E9232CF97B0400CD3DEC /* GoogleSignIn in Frameworks */,
+				9AB8E9252CF97B0400CD3DEC /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +66,9 @@
 		9AB8E9072CF4319400CD3DEC /* TheSimpleCloud2 */ = {
 			isa = PBXGroup;
 			children = (
+				9AB8E9272CF9941E00CD3DEC /* client_1024248679237-54lmurqjut46li6m0rikh809tbrd8p34.apps.googleusercontent.com.plist */,
+				9AB8E9262CF97E5200CD3DEC /* Info.plist */,
+				9AB8E91B2CF4390A00CD3DEC /* Modules */,
 				9AB8E9082CF4319400CD3DEC /* TheSimpleCloud2App.swift */,
 				9AB8E90A2CF4319400CD3DEC /* ContentView.swift */,
 				9AB8E90C2CF4319600CD3DEC /* Assets.xcassets */,
@@ -73,6 +87,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9AB8E91B2CF4390A00CD3DEC /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9AB8E91C2CF4391300CD3DEC /* LoginModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9AB8E91C2CF4391300CD3DEC /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				9AB8E91D2CF4395500CD3DEC /* LoginView.swift */,
+				9AB8E91F2CF5993D00CD3DEC /* LoginViewModel.swift */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,6 +120,10 @@
 			dependencies = (
 			);
 			name = TheSimpleCloud2;
+			packageProductDependencies = (
+				9AB8E9222CF97B0400CD3DEC /* GoogleSignIn */,
+				9AB8E9242CF97B0400CD3DEC /* GoogleSignInSwift */,
+			);
 			productName = TheSimpleCloud2;
 			productReference = 9AB8E9052CF4319400CD3DEC /* TheSimpleCloud2.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +152,9 @@
 				Base,
 			);
 			mainGroup = 9AB8E8FC2CF4319400CD3DEC;
+			packageReferences = (
+				9AB8E9212CF97B0400CD3DEC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
 			productRefGroup = 9AB8E9062CF4319400CD3DEC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -133,6 +171,7 @@
 			files = (
 				9AB8E9102CF4319600CD3DEC /* Preview Assets.xcassets in Resources */,
 				9AB8E90D2CF4319600CD3DEC /* Assets.xcassets in Resources */,
+				9AB8E9282CF9941E00CD3DEC /* client_1024248679237-54lmurqjut46li6m0rikh809tbrd8p34.apps.googleusercontent.com.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +184,9 @@
 			files = (
 				9AB8E9152CF4319600CD3DEC /* TheSimpleCloud2.xcdatamodeld in Sources */,
 				9AB8E9122CF4319600CD3DEC /* Persistence.swift in Sources */,
+				9AB8E9202CF5993D00CD3DEC /* LoginViewModel.swift in Sources */,
 				9AB8E90B2CF4319400CD3DEC /* ContentView.swift in Sources */,
+				9AB8E91E2CF4395500CD3DEC /* LoginView.swift in Sources */,
 				9AB8E9092CF4319400CD3DEC /* TheSimpleCloud2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +324,7 @@
 				DEVELOPMENT_TEAM = 33K9YBN2Y2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheSimpleCloud2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,6 +354,7 @@
 				DEVELOPMENT_TEAM = 33K9YBN2Y2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TheSimpleCloud2/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -352,6 +395,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9AB8E9212CF97B0400CD3DEC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9AB8E9222CF97B0400CD3DEC /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AB8E9212CF97B0400CD3DEC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		9AB8E9242CF97B0400CD3DEC /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9AB8E9212CF97B0400CD3DEC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9AB8E9132CF4319600CD3DEC /* TheSimpleCloud2.xcdatamodeld */ = {
